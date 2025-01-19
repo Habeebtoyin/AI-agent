@@ -1,0 +1,7 @@
+dexscreener==1.2
+langchain==0.3.14
+langchain_community==0.3.14
+langchain_core==0.3.30
+langchain_google_genai==2.0.9
+langchain_groq==0.2.3
+streamlit==1.37.1
