@@ -22,27 +22,26 @@ import os
 system_prompt_template = """You are an AI agent for general web3 questions. You cannot respond to requests outside of web3.
 if asked anything about daos.fun use these data:
 ```
-For DAO Token holders
-How It Works
-1. Fundraise
-Creators have 1 week to fundraise the desired SOL amount. This fundraise is a fair launch for the DAO token where everyone gets the same price.
-Creators choose who to invite to the Party Round. You might get an invite link on their Telegram, X, or other communities.
-2. Trading (Fundraise successful)
-Once fundraise is over, creators take charge of 90 percent of SOL to invest on their favorite Solana protocols, and the token goes public on an AMM with 10% of fundraised SOL. This allows the DAO token price to fluctuate based on the trading activity of the fund.
-Once launched, you can sell your DAO tokens anytime, because the pool liquidity is locked on DAOS.FUN pool.
-3. Fund Expiration
-At the fund's expiration, the DAO wallet is frozen, and SOL in profits is distributed back to token holders. You can burn your DAO tokens to redeem the DAO’s underlying assets, or simply sell it on the curve anytime.
-Frequently Asked Questions
-1. Why are DAO tokens mintable?
-The DAO token mint authority is set to the voting module (coming Q4 2024-Q1 2025). Once the voting module is released, DAO token holders can can vote to mint more tokens to fundraise, to pay for DEX, or permanently burn the mint authority.
-2. What is an investment DAO
-A creator-funded smart wallet with special rules that invests on behalf of DAO token holders.
-3. What are verified creators?
-Creators that we extensively verify will have a blue checkmark next to them. Any creator without a checkmark you will have to trust at your own risk. DYOR.
-4. Can I sell the DAO token at anytime?
-Yes, as long as the market cap of the DAO token exceeds the original fundraise amount.
-5. What happens if creator does not meet fundraising goal within week? 
-You can redeem your SOL back if fundraising fails.
+What is OnlyFi?
+OnlyFi is the #1 decentralized exchange (DEX) built natively on the OnlyLayer Blockchain, a Layer 2 blockchain. It combines AI-driven tools with advanced Layer 2 technology to offer users faster transactions, lower fees, and smarter trading solutions.
+
+What problem is OnlyFi trying to solve?
+OnlyFi addresses key challenges in decentralized finance (DeFi), including high transaction fees, slow transaction speeds, and the lack of intelligent trading tools for users. By leveraging Layer 2 scalability and AI, OnlyFi creates a seamless, efficient, and cost-effective trading experience.
+
+How does OnlyFi work?
+OnlyFi operates on the OnlyLayer Blockchain, a high-performance Layer 2 platform. It enables users to trade tokens, provide liquidity, and earn rewards, all while benefiting from low transaction fees (0.15%) and lightning-fast speeds. Its AI tools help optimize trades and provide actionable insights for better decision-making.
+
+How is AI implemented in OnlyFi?
+AI is integrated into OnlyFi to enhance the trading experience by offering features such as predictive market analysis, smart order routing, and risk management tools. These AI-driven insights empower users to make smarter trading decisions with minimal effort.
+
+Does OnlyFi support multichain?
+Yes, OnlyFi is designed to support multichain functionality, enabling seamless integration with other blockchain ecosystems and providing users access to a broader range of tokens and liquidity pools.
+
+What is the transaction fee on OnlyFi?
+OnlyFi offers one of the lowest transaction fees in the industry, charging just 0.15% per transaction, making it an affordable option for traders and liquidity providers.
+
+Is OnlyFi safe to use?
+Yes, OnlyFi prioritizes security with robust smart contract audits, decentralized architecture, and advanced security protocols. Users can trade and provide liquidity with confidence, knowing their assets are protected.
 ```
 """
 chat_prompts = [
@@ -81,7 +80,7 @@ agent = create_tool_calling_agent(llm=llm, tools=tools, prompt=prompt)
 agent_executor = AgentExecutor(agent=agent, tools=tools, verbose=True)
 
 if __name__ == "__main__":
-    st.title("Oculus AI")
+    st.title("OnlyFi AI")
     # chat interface for consistent queries
     if "messages" not in st.session_state:
         st.session_state.messages = []
